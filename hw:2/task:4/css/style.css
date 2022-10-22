@@ -1,0 +1,111 @@
+/*Обнуление*/
+*{padding:0;margin:0;border:0;}
+*,*:before,*:after{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box;}
+:focus,:active{outline:none;}
+a:focus,a:active{outline:none;}
+nav,footer,header,aside{display:block;}
+html,body{height:100%;width:100%;font-size:100%;line-height:1;font-size:14px;-ms-text-size-adjust:100%;-moz-text-size-adjust:100%;-webkit-text-size-adjust:100%;}
+input,button,textarea{font-family:inherit;}
+input::-ms-clear{display:none;}
+button{cursor:pointer;}
+button::-moz-focus-inner{padding:0;border:0;}
+a,a:visited{text-decoration:none;}
+a:hover{text-decoration:none;}
+ul li{list-style:none;}
+img{vertical-align:top;}
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit;}
+/*--------------------*/
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    padding: 5px;
+    border: 2px solid #3C6494;
+}
+.header {
+    background-color: #4F81BD;
+    width: 100%;
+    height: 80px;
+    border: 2px solid #3C6494;
+}
+.container__main {
+    display: flex;
+}
+.container__nav {
+    display: flex;
+    margin: 0 5px 0 0;
+    flex: 2;
+    align-items: flex-end;
+}
+.nav {
+    background-color: yellow;
+    border: 2px solid #3C6494;
+    height: 80px;
+    min-width: 100%;
+}
+.container__green {
+    background-color: #92CF51;
+    border: 2px solid #3C6494;
+    display: flex;
+    margin: 30px 0 0 0;
+    flex: 3;
+    padding: 50px 20px 20px 20px;
+}
+.main__item-blue {
+    background-color: #00AFF0;
+    border: 2px solid #3C6494;
+    height: 500px;
+    margin: 5px;
+    flex: 2;
+}
+.main__container__orange-red {
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+    flex: 2;
+    justify-content: space-between;
+}
+.main__item-orange {
+    background-color: #E46C0B;
+    min-width: 200px;
+    border: 2px solid #3C6494;
+    height: 100px;
+}
+.main__item-red {
+    background-color: red;
+    min-width: 200px;
+    border: 2px solid #3C6494;
+    height: 100px;
+}
+@media (max-width: 700px) {
+    .container__main {
+        display: flex;
+        flex-direction: column;
+    }
+    .container__green {
+        display: flex;
+        align-items: center;
+        padding: 20px;
+        margin-top: 50px;
+    }
+    .main__container__orange-red {
+        display: flex;
+        align-items: flex-end;
+    }
+    .main__item-blue {
+        max-height: 50px;
+        min-width: 100px;
+        flex: 0;
+    }
+    .main__item-orange {
+        max-height: 50px;
+        min-width: 100px;  
+    }
+    .main__item-red {
+        display: none;
+    }
+    .container__nav {
+        margin: 50px 0 0 0;
+        order: 2;
+    }
+}
